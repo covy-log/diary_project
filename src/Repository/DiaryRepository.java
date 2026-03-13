@@ -1,5 +1,6 @@
 package Repository;
 
+import common.SystemMessage;
 import dto.Diary;
 import dto.Member;
 
@@ -31,14 +32,14 @@ public class DiaryRepository {
 
         for (Diary diary : list) {
             if (diary.getAuthor().equals(member.getId())) {
-                str += diary.getSeqno() + ". " + diary.getTitle() + "\n";
+                str += "제목: " + diary.getSeqno() + "." + diary.getTitle() + "\n";
                 str += "작성자: " + diary.getAuthor() + ", 날짜: " + diary.getRegDt() +"\n";
-                str += diary.getContent() + "\n\n";
+                str += "내용: " + diary.getContent() + "\n\n";
             }
         }
 
         if (str.length() == 0){
-            return "[작성된 일기가 없습니다.]";
+            return SystemMessage.DIARY_NO_EXIST;
         } else {
             return str;
         }
