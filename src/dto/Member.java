@@ -1,9 +1,9 @@
 package dto;
 
 public class Member {
-    String id;
-    String pwd;
-    String name;
+    public String id;
+    public String pwd;
+    public String name;
 
     public Member(String id, String pwd, String name) {
         this.id = id;

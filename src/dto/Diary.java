@@ -1,16 +1,18 @@
 package dto;
 
 public class Diary {
-    int seqno;
-    String title;
-    String content;
-    String regDt;
+    public int seqno;
+    public String title;
+    public String content;
+    public String regDt;
+    public String author;
 
-    public Diary(int seqno, String title, String content, String regDt) {
+    public Diary(int seqno, String title, String content, String regDt, String author) {
         this.seqno = seqno;
         this.title = title;
         this.content = content;
         this.regDt = regDt;
+        this.author = author;
     }
 
     @Override
@@ -20,6 +22,7 @@ public class Diary {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", regDt='" + regDt + '\'' +
+                ", author='" + author + '\'' +
                 '}';
     }
 }
