@@ -37,7 +37,7 @@ public class Main {
                     System.out.printf("regDt: ");
                     String regDt = sc.nextLine();
 
-                    Diary diary = new Diary(seqno, title, content, regDt, member.name);
+                    Diary diary = new Diary(seqno, title, content, regDt, member.getName());
                     list.add(diary);
                     System.out.println("글쓰기 완료: " + diary.toString());
                     break;
